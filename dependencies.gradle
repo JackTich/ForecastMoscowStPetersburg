@@ -1,0 +1,31 @@
+ext{
+    toolsBuildVersion= '4.0.1'
+    kotlin_version = '1.4.0'
+    dagger2Version = '2.25.3'
+    gsonVersion = '2.8.6'
+    retrofit2version = '2.9.0'
+    retrofit2LoggerVersion = '4.6.0'
+    threetenabpVersion = '1.2.4'
+    facebookShimmerLayoutVersion = '0.5.0'
+    recycleViewVersion = '1.2.0-alpha04'
+    coroutinesVersion = '1.3.9'
+    materialVersion = '1.2.0-alpha06'
+
+    projectDependencies = [
+            recycleView             : "androidx.recyclerview:recyclerview:$recycleViewVersion",
+            retrofit2               : "com.squareup.retrofit2:retrofit:$retrofit2version",
+            retrofitLogger          : "com.squareup.okhttp3:logging-interceptor:$retrofit2LoggerVersion",
+            dagger                  : "com.google.dagger:dagger:$dagger2Version",
+            daggerAndroid           : "com.google.dagger:dagger-android:$dagger2Version",
+            daggerSupport           : "com.google.dagger:dagger-android-support:$dagger2Version",
+            gson                    : 'com.google.code.gson:gson:' + gsonVersion,
+            threetenabp             : "com.jakewharton.threetenabp:threetenabp:$threetenabpVersion",
+            facebookShimmerLayout   : "com.facebook.shimmer:shimmer:$facebookShimmerLayoutVersion",
+            coroutines              : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion",
+            material                : "com.google.android.material:material:$materialVersion",
+    ]
+    kaptDependencies = [
+            dagger       : "com.google.dagger:dagger-compiler:$dagger2Version",
+            daggerAndroid: "com.google.dagger:dagger-android-processor:$dagger2Version",
+    ]
+}
