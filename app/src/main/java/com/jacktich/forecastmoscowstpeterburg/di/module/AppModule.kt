@@ -2,6 +2,8 @@ package com.jacktich.forecastmoscowstpeterburg.di.module
 
 import android.app.Application
 import android.content.Context
+import com.jacktich.forecastmoscowstpeterburg.data.api.IWeatherApiHelper
+import com.jacktich.forecastmoscowstpeterburg.data.api.WeatherApiHelper
 import com.jacktich.forecastmoscowstpeterburg.data.preferences.AppPreferenceHelper
 import com.jacktich.forecastmoscowstpeterburg.data.preferences.PreferenceHelper
 import dagger.Module
@@ -18,5 +20,9 @@ class AppModule {
     @Provides
     @Singleton
     internal fun provideContext(application: Application): Context = application
+
+    @Provides
+    @Singleton
+    internal fun provideApiHelper(weatherApiHelper: WeatherApiHelper): IWeatherApiHelper = weatherApiHelper
 
 }

@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.gmap.GmapActivity" />
+    android:layout_height="match_parent">
+    <fragment
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.gmap.view.GmapActivity" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_gravity="center|top"
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imgGmapWeather"
+            map:layout_constraintTop_toTopOf="parent"
+            map:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvGmapTemperature"
+            android:textSize="36sp"
+            android:textColor="@color/primaryText"
+            map:layout_constraintTop_toTopOf="@+id/imgGmapWeather"
+            map:layout_constraintBottom_toBottomOf="@id/imgGmapWeather"
+            map:layout_constraintLeft_toRightOf="@id/imgGmapWeather"
+            android:layout_marginStart="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvGmapWeatherState"
+            map:layout_constraintTop_toBottomOf="@id/imgGmapWeather"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent"
+            android:textSize="18sp"
+            android:textColor="@color/primaryText"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

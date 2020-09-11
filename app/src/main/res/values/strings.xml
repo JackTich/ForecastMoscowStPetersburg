@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">ForecastMoscowStPeterburg</string>
     <string name="title_activity_gmap">Map</string>
+    <string name="st_petersburg">Санкт-Петербург</string>
+    <string name="moscow">Москва</string>
+    <string name="degree">°C</string>
+    <string name="refresh_page_error">Обновите страницу для получения координат</string>
+    <string name="three_dots">...</string>
 </resources>

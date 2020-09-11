@@ -3,4 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="ghost">#F6F6F6</color>
+    <color name="primaryText">#0D1E2C</color>
+    <color name="rippleGray">#d5d5d5</color>
+
 </resources>

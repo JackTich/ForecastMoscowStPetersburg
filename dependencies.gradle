@@ -15,13 +15,14 @@ ext{
             recycleView             : "androidx.recyclerview:recyclerview:$recycleViewVersion",
             retrofit2               : "com.squareup.retrofit2:retrofit:$retrofit2version",
             retrofitLogger          : "com.squareup.okhttp3:logging-interceptor:$retrofit2LoggerVersion",
+            retrofitGson            : "com.squareup.retrofit2:converter-gson:$retrofit2version",
             dagger                  : "com.google.dagger:dagger:$dagger2Version",
             daggerAndroid           : "com.google.dagger:dagger-android:$dagger2Version",
             daggerSupport           : "com.google.dagger:dagger-android-support:$dagger2Version",
             gson                    : 'com.google.code.gson:gson:' + gsonVersion,
             threetenabp             : "com.jakewharton.threetenabp:threetenabp:$threetenabpVersion",
             facebookShimmerLayout   : "com.facebook.shimmer:shimmer:$facebookShimmerLayoutVersion",
-            coroutines              : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion",
+            coroutines              : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion",
             material                : "com.google.android.material:material:$materialVersion",
     ]
     kaptDependencies = [
