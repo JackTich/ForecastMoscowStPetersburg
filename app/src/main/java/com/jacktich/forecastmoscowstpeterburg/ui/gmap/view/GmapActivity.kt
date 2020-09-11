@@ -1,6 +1,5 @@
 package com.jacktich.forecastmoscowstpeterburg.ui.gmap.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -38,10 +37,11 @@ class GmapActivity : BaseActivity(), OnMapReadyCallback, GmapMVPView {
         mapFragment.getMapAsync(this)
     }
 
-    private fun initInfoWindow(position: Int){
+    private fun initInfoWindow(position: Int) {
         val currentDay = presenter.getPref().getWeatherList().data[position]
-        val averageDegrees = toDegrees((currentDay.apparentTemperatureMin + currentDay.apparentTemperatureMax) / 2)
-        currentDay.icon?.let{
+        val averageDegrees =
+            toDegrees((currentDay.apparentTemperatureMin + currentDay.apparentTemperatureMax) / 2)
+        currentDay.icon?.let {
             imgGmapWeather.setImageResource(getImageFromApi(it))
         }
         tvGmapTemperature.text = getTempString(averageDegrees, this)
@@ -58,9 +58,9 @@ class GmapActivity : BaseActivity(), OnMapReadyCallback, GmapMVPView {
      * installed Google Play services and returned to the app.
      */
     override fun onMapReady(googleMap: GoogleMap) {
-        val coords = presenter.getPref().getCoords()
+        val coordsModel = presenter.getPref().getCoords()
         mMap = googleMap
-        val location = LatLng(coords.latitude, coords.longitude)
+        val location = LatLng(coordsModel.latitude, coordsModel.longitude)
         mMap.addMarker(MarkerOptions().position(location))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15f))
     }
